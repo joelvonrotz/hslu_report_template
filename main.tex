@@ -1,28 +1,19 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage{preamble}
-
+\usepackage{listings} 
+% CONFIGURATION
+% here you can change basic infos about the document.
 \author{Wizard of OZ}
 \date{03.03.2022}
 \title{Title of the lab report}
 
 % =============================================================================
 \begin{document}
-\begin{center}
-  \vspace*{0cm}
-  \makeatletter
-  \Huge{ \noindent
-    \textbf{\@title}\\
-  }
-  \normalsize{
-    Laborbericht - Elektrotechnik 2
-  }
-  \makeatother
-  \vspace{1cm}
-\end{center}
 
+% TITLE PAGE/BLOCK 
+\input{title.tex}
 
-
-
+% SECTIONS
 \subfile{sections/01_introduction.tex}
 \subfile{sections/02_expectation.tex}
 \subfile{sections/03_measuring_circuit.tex}
