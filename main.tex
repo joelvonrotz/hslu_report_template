@@ -1,16 +1,27 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage{preamble}
 
+\author{Wizard of OZ}
+\date{03.03.2022}
+\title{Title of the lab report}
+
 % =============================================================================
 \begin{document}
-{
-\Huge{ \noindent
-  \textbf{Titel zum Laborbericht}\\
-}
-\small{
-  Laborbericht - Elektrotechnik 2
-}
-}
+\begin{center}
+  \vspace*{0cm}
+  \makeatletter
+  \Huge{ \noindent
+    \textbf{\@title}\\
+  }
+  \normalsize{
+    Laborbericht - Elektrotechnik 2
+  }
+  \makeatother
+  \vspace{1cm}
+\end{center}
+
+
+
 
 \subfile{sections/01_introduction.tex}
 \subfile{sections/02_expectation.tex}

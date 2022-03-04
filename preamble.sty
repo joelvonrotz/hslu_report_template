@@ -1,4 +1,6 @@
 \ProvidesPackage{preamble}
+% Language Support using Babel
+\usepackage[german]{babel}
 
 % Define margines of the page
 \usepackage{geometry} 
@@ -14,17 +16,23 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
+
+
+
+
 % footer and header styling
+\makeatletter
 \lhead{HSLU T\&A - Elektrotechnik 2}
 \chead{}
-\rhead{The Wizard of oz}
+\rhead{\@author}
 
 \lfoot{}
 \cfoot{\thepage\ / \pageref{LastPage}}
-\rfoot{25.02.2022}
+\rfoot{\@date}
+\makeatother
 
-\renewcommand{\headrulewidth}{1pt}
-\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\headrulewidth}{0.25pt}
+\renewcommand{\footrulewidth}{0.25pt}
 
 
 
@@ -110,20 +118,15 @@
 %\usepackage{biblatex}
 
 % define citation style (https://de.overleaf.com/learn/latex/Biblatex_bibliography_styles)
-\usepackage[
-backend=biber,
-% style=apa, %numeric
-bibstyle=apa,
-citestyle=numeric,
-]{biblatex}
+%\usepackage[backend=biber,style=apa]{biblatex}
 
 % Implementation via: https://tex.stackexchange.com/questions/479300/problem-biblatex-numeric-apa-style
-\makeatletter
-\RequireBibliographyStyle{numeric}
-\makeatother
+% \makeatletter
+% \RequireBibliographyStyle{numeric}
+% \makeatother
 
 % add the bilatex resource from Citavi
-\addbibresource{MasterThesis.bib}
+%\addbibresource{dummy.bib}
 
 % Landscape layout for the tables
 \usepackage{pdflscape}
