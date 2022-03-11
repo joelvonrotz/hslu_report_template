@@ -1,4 +1,8 @@
 \ProvidesPackage{preamble}
+
+% Use Sans-Serif for whole document
+\renewcommand{\familydefault}{\sfdefault}
+
 % Language Support using Babel
 \usepackage[german]{babel}
 
@@ -49,6 +53,7 @@
 
 % Picture implementation
 \usepackage{graphicx} 
+\graphicspath{ {./assets/} }
 
 % For wrapping text around figures
 \usepackage{wrapfig}
