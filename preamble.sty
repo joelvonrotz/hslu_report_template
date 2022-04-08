@@ -1,7 +1,24 @@
 \ProvidesPackage{preamble}
 
+% removes the small indent when starting a new paragraph
+\usepackage{parskip}
+
+% Hyperref package to include URLs when required
+\usepackage{hyperref}
+\hypersetup{
+    urlcolor=blue
+}
+
+\usepackage{float}
+
+% extends mathmatical elements such as multiline statements
+\usepackage{amsmath}
+
+% configures the equation numbering to use the respective numbers 
+\numberwithin{equation}{section}
+
 % Use Sans-Serif for whole document
-\renewcommand{\familydefault}{\sfdefault}
+%\renewcommand{\familydefault}{\sfdefault}
 
 % Language Support using Babel
 \usepackage[german]{babel}
@@ -9,7 +26,7 @@
 % Define margines of the page
 \usepackage{geometry} 
 %\geometry{verbose,tmargin=25mm,bmargin=25mm,lmargin=25mm,rmargin=25mm}
-\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\geometry{verbose,tmargin=3cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm,headheight=14pt}
 % Show the frames
 % \usepackage{showframe} 
 
@@ -21,8 +38,11 @@
 \pagestyle{fancy}
 
 
-
-
+\usepackage{siunitx}
+\sisetup{
+  per-mode=fraction,
+  fraction-function=\tfrac
+}
 
 % footer and header styling
 \makeatletter
@@ -150,8 +170,7 @@
         % Table and Figrue before title is bf
         \captionsetup[table]{labelfont=bf}
         % Txt justification
-        \captionsetup{justification   = justified,
-              singlelinecheck = false}
+        \captionsetup{justification=centering}
         
 
 
