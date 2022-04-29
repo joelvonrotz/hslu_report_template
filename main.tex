@@ -2,6 +2,14 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage{preamble}
 
+% [QUICK CONFIG]-------------------------
+% > SANS SERIF EVERYTHING
+% Uncomment to enable sans-serif font for everything (except math and others)
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+% for math font
+\usepackage{cmbright}
+
 % [VISUAL STUDIO CODE]-------------------
 % I recommend setting an output path for the 'Latex Workshop' extension.
 % I use following path, which generates the output into a 'output' folder:
@@ -26,6 +34,7 @@
 
 % uncomment this if you need a table of contents
 \tableofcontents
+\newpage
 
 % SECTIONS
 \subfile{sections/01_introduction.tex}
