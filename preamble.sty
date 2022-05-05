@@ -184,3 +184,13 @@
     colback=black!10!white,
     sharp corners
 }
+
+\newenvironment{conditions}
+  { % start-code
+    \par\vspace{\abovedisplayskip}\noindent
+    \begin{tabular}{>{$}c<{$} @{${}:{}$} l}
+  }
+  { % end-code
+    \end{tabular}
+    \par\vspace{\belowdisplayskip}
+  }
